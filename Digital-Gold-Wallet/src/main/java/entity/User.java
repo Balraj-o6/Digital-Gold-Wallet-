@@ -26,7 +26,7 @@ public class User {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "address_id")
-    private Address address
+    private Address address;
 
     @Column(name = "balance", precision = 18, scale = 2)
     private BigDecimal balance;
