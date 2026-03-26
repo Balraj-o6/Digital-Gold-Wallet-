@@ -1,5 +1,6 @@
 package com.example.entity;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 import jakarta.persistence.Entity;
@@ -30,7 +31,7 @@ public class VendorBranch {
     @JoinColumn(name = "address_id")
     private Address address;
 
-    private Double quantity;
+    private BigDecimal quantity;
     private LocalDateTime createdAt;
 
     // Getters and Setters

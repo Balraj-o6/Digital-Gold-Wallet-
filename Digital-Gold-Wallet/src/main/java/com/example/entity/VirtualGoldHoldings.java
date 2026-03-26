@@ -1,5 +1,6 @@
 package com.example.entity;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 import jakarta.persistence.Entity;
@@ -29,7 +30,7 @@ public class VirtualGoldHoldings {
     @JoinColumn(name = "branch_id")
     private VendorBranch branch;
 
-    private Double quantity;
+    private BigDecimal quantity;
     private LocalDateTime createdAt;
 	
 	
