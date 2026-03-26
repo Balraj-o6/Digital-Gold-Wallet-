@@ -1,5 +1,6 @@
 package com.example.entity;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 import com.example.enums.PaymentMethod;
@@ -32,7 +33,7 @@ public class Payment {
     @JoinColumn(name = "user_id")
     private User user;
 
-    private Double amount;
+    private BigDecimal amount;
 
     @Enumerated(EnumType.STRING)
     private PaymentMethod paymentMethod;

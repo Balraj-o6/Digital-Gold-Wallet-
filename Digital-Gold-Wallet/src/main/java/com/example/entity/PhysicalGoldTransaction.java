@@ -1,5 +1,6 @@
 package com.example.entity;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 import jakarta.persistence.Entity;
@@ -30,7 +31,7 @@ public class PhysicalGoldTransaction {
     @JoinColumn(name = "branch_id")
     private VendorBranch branch;
 
-    private Double quantity;
+    private BigDecimal quantity;
 
     @ManyToOne
     @JoinColumn(name = "delivery_address_id")

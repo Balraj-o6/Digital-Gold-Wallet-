@@ -1,5 +1,6 @@
 package com.example.entity;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 import com.example.enums.TransactionStatus;
@@ -41,8 +42,8 @@ public class TransactionHistory {
     @Enumerated(EnumType.STRING)
     private TransactionStatus transactionStatus;
 
-    private Double quantity;
-    private Double amount;
+    private BigDecimal quantity;
+    private BigDecimal amount;
 
     private LocalDateTime createdAt;
 
