@@ -15,11 +15,12 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Table(name = "virtual_gold_holdings")
-public class VirtualGoldHoldings {
-	@Id
+@Table(name = "physical_gold_transactions")
+public class PhysicalGoldTransaction {
+
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer holdingId;
+    private Integer transactionId;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
@@ -30,8 +31,12 @@ public class VirtualGoldHoldings {
     private VendorBranch branch;
 
     private Double quantity;
+
+    @ManyToOne
+    @JoinColumn(name = "delivery_address_id")
+    private Address deliveryAddress;
+
     private LocalDateTime createdAt;
-	
-	
-	
+
+    // Getters and Setters
 }
