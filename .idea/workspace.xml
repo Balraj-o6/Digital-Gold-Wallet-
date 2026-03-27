@@ -6,27 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8a854399-9326-4826-adea-dd8d8da804ca" name="Changes" comment="Merge pull request #4 from Balraj-o6/anant-new&#10;&#10;Vendor environment files created">
       <changelist_data name="AnantSingh555" email="139130113+anantsingh555@users.noreply.github.com" automatic="false" />
-      <change afterPath="$PROJECT_DIR$/Digital-Gold-Wallet/src/main/java/com/example/dto/PaymentDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Digital-Gold-Wallet/src/main/java/com/example/dto/VirtualGoldHoldingDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Digital-Gold-Wallet/src/main/java/com/example/dao/IAddressRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Digital-Gold-Wallet/src/main/java/com/example/dao/IAddressRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Digital-Gold-Wallet/src/main/java/com/example/dao/IPaymentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Digital-Gold-Wallet/src/main/java/com/example/dao/IPaymentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Digital-Gold-Wallet/src/main/java/com/example/dao/IPhysicalGoldTransactionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Digital-Gold-Wallet/src/main/java/com/example/dao/IPhysicalGoldTransactionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Digital-Gold-Wallet/src/main/java/com/example/dao/ITransactionHistoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Digital-Gold-Wallet/src/main/java/com/example/dao/ITransactionHistoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Digital-Gold-Wallet/src/main/java/com/example/dao/IUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Digital-Gold-Wallet/src/main/java/com/example/dao/IUserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Digital-Gold-Wallet/src/main/java/com/example/dao/IVendorBranchRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Digital-Gold-Wallet/src/main/java/com/example/dao/IVendorBranchRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Digital-Gold-Wallet/src/main/java/com/example/dao/IVirtualGoldHoldingsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Digital-Gold-Wallet/src/main/java/com/example/dao/IVirtualGoldHoldingsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Digital-Gold-Wallet/src/main/java/com/example/entity/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/Digital-Gold-Wallet/src/main/java/com/example/entity/Address.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Digital-Gold-Wallet/src/main/java/com/example/entity/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/Digital-Gold-Wallet/src/main/java/com/example/entity/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Digital-Gold-Wallet/src/main/java/com/example/entity/PhysicalGoldTransaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/Digital-Gold-Wallet/src/main/java/com/example/entity/PhysicalGoldTransaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Digital-Gold-Wallet/src/main/java/com/example/entity/TransactionHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/Digital-Gold-Wallet/src/main/java/com/example/entity/TransactionHistory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Digital-Gold-Wallet/src/main/java/com/example/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Digital-Gold-Wallet/src/main/java/com/example/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Digital-Gold-Wallet/src/main/java/com/example/entity/VendorBranch.java" beforeDir="false" afterPath="$PROJECT_DIR$/Digital-Gold-Wallet/src/main/java/com/example/entity/VendorBranch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Digital-Gold-Wallet/src/main/java/com/example/entity/VirtualGoldHoldings.java" beforeDir="false" afterPath="$PROJECT_DIR$/Digital-Gold-Wallet/src/main/java/com/example/entity/VirtualGoldHoldings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Digital-Gold-Wallet/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Digital-Gold-Wallet/target/classes/META-INF/maven/com.example/Digital-Gold-Wallet/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Digital-Gold-Wallet/target/classes/com/example/demo/DigitalGoldWalletApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Digital-Gold-Wallet/target/test-classes/com/example/demo/DigitalGoldWalletApplicationTests.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,17 +57,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "anant-new",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;anant-new&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
