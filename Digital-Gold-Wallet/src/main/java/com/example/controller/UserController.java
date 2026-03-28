@@ -2,12 +2,17 @@ package com.example.controller;
 
 import com.example.dto.TopUserHoldingDTO;
 import com.example.dto.TransactionHistoryDTO;
+import com.example.dto.UserPortfolioDTO;
 import com.example.service.ITopUserService;
 import com.example.service.ITransactionHistoryService;
+import com.example.service.IUserService;
+import com.example.service.UserService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,6 +28,9 @@ public class UserController {
 
     @Autowired
     private ITransactionHistoryService transactionHistoryService;
+    
+    @Autowired
+    private IUserService userService;
 
 
     @GetMapping("/top-holdings")
@@ -40,5 +48,13 @@ public class UserController {
         List<TransactionHistoryDTO> transactions =
                 transactionHistoryService.getTransactionsByStatus(status);
         return new ResponseEntity<>(transactions, HttpStatus.OK);
+        
+        
+    }
+    // done by balraj.
+    @GetMapping("/{id}/portfolio")
+    public ResponseEntity<UserPortfolioDTO> getUserPortfolio(@PathVariable Integer id) {
+        UserPortfolioDTO portfolio = userService.getUserPortfolio(id);
+        return new ResponseEntity<>(portfolio, HttpStatus.OK);
     }
 }
