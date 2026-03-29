@@ -2,6 +2,7 @@ package com.example.controller;
 
 import com.example.dto.TopUserHoldingDTO;
 import com.example.dto.TransactionHistoryDTO;
+import com.example.dto.UserDTO;
 import com.example.dto.UserPortfolioDTO;
 import com.example.service.ITopUserService;
 import com.example.service.ITransactionHistoryService;
@@ -56,5 +57,13 @@ public class UserController {
     public ResponseEntity<UserPortfolioDTO> getUserPortfolio(@PathVariable Integer id) {
         UserPortfolioDTO portfolio = userService.getUserPortfolio(id);
         return new ResponseEntity<>(portfolio, HttpStatus.OK);
+    }
+    
+    
+ // GET /api/users/email?email=abc@mail.com
+    @GetMapping("/email")
+    public ResponseEntity<UserDTO> getUserByEmail(@RequestParam String email) {
+        UserDTO user = userService.getUserByEmail(email);
+        return new ResponseEntity<>(user, HttpStatus.OK);
     }
 }

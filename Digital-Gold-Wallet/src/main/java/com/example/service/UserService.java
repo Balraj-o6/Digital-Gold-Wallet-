@@ -10,6 +10,7 @@ import com.example.dto.VirtualGoldHoldingDTO;
 import com.example.entity.PhysicalGoldTransaction;
 import com.example.entity.User;
 import com.example.entity.VirtualGoldHoldings;
+import com.example.exception.UserNotFoundException;
 import com.example.mapper.AddressMapper;
 import com.example.mapper.PhysicalGoldTransactionMapper;
 import com.example.mapper.UserMapper;
@@ -33,24 +34,19 @@ public class UserService implements IUserService {
     @Autowired
     private IPhysicalGoldTransactionRepository physicalGoldTransactionRepository;
 
-    @Override
-    public UserDTO getUserById(Integer userId) {
-        User user = userRepository.findById(userId)
-                .orElseThrow(() -> new RuntimeException("User not found with ID: " + userId));
-        return UserMapper.convertEntityToDTO(user);
-    }
+   
 
     @Override
     public UserDTO getUserByEmail(String email) {
         User user = userRepository.findByEmail(email)
-                .orElseThrow(() -> new RuntimeException("User not found with email: " + email));
+                .orElseThrow(() -> new UserNotFoundException("User not found with email: " + email));
         return UserMapper.convertEntityToDTO(user);
     }
 
     @Override
     public UserPortfolioDTO getUserPortfolio(Integer userId) {
         User user = userRepository.findById(userId)
-                .orElseThrow(() -> new RuntimeException("User not found with ID: " + userId));
+                .orElseThrow(() -> new UserNotFoundException("User not found with ID: " + userId));
 
         List<VirtualGoldHoldings> virtualList =
                 virtualGoldHoldingsRepository.findByUser_UserId(userId);
