@@ -46,16 +46,5 @@ public class VendorService implements IVendorService {
         else throw new VendorNotFoundException("Vendor Not Found !!!");
     }
 
-    @Override
-    public AdminVendorDTO saveVendor(AdminVendorDTO avDto) {
-        Vendor savedVendor=repo.saveAndFlush(VendorMapper.convertAdminDtoToEntity(avDto));
-        return VendorMapper.convertEntityToAdminDto(savedVendor);
-    }
 
-    @Override
-    public String deleteVendor(Integer id) {
-        getVendorById(id);
-        repo.deleteById(id);
-        return "Vendor Deleted Successfully !!!";
-    }
 }

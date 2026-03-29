@@ -36,16 +36,6 @@ public class VendorController {
         return new ResponseEntity<>(avDto, HttpStatus.OK);
     }
 
-    @PostMapping
-    public ResponseEntity<AdminVendorDTO> createVendor(@Valid @RequestBody AdminVendorDTO avDto){
-        AdminVendorDTO savedVendor=service.saveVendor(avDto);
-        return new ResponseEntity<>(savedVendor, HttpStatus.CREATED);
-    }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity<String> deleteVendor(@PathVariable Integer id){
-        String output=service.deleteVendor(id);
-        return new ResponseEntity<>(output, HttpStatus.OK);
-    }
 
 }
