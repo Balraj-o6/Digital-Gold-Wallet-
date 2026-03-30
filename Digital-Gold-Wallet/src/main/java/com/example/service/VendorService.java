@@ -38,8 +38,8 @@ public class VendorService implements IVendorService {
     }
 
     @Override
-    public AdminVendorDTO getVendorById(Integer id) throws VendorNotFoundException {
-        Optional<Vendor> op=repo.findById(id);
+    public AdminVendorDTO getVendorByName(String name) throws VendorNotFoundException {
+        Optional<Vendor> op=repo.findByVendorName(name);
         if(op.isPresent()){
             return VendorMapper.convertEntityToAdminDto(op.get());
         }

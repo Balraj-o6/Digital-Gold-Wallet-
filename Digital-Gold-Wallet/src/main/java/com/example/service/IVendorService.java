@@ -10,6 +10,6 @@ import java.util.Optional;
 public interface IVendorService {
     public List<PublicVendorDTO> getAllPublicVendors();
     public List<AdminVendorDTO> getAllAdminVendors();
-    public AdminVendorDTO getVendorById(Integer id);
+    public AdminVendorDTO getVendorByName(String name);
 
 }

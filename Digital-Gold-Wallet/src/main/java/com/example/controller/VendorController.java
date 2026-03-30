@@ -30,9 +30,9 @@ public class VendorController {
         return new ResponseEntity<>(adminVendors, HttpStatus.OK);
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<AdminVendorDTO> getVendorById(@PathVariable Integer id){
-        AdminVendorDTO avDto=service.getVendorById(id);
+    @GetMapping("/{name}")
+    public ResponseEntity<AdminVendorDTO> getVendorById(@PathVariable String name){
+        AdminVendorDTO avDto=service.getVendorById(name);
         return new ResponseEntity<>(avDto, HttpStatus.OK);
     }
 
