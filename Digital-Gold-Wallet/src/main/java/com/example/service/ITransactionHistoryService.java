@@ -10,5 +10,6 @@ import java.util.List;
     	
         // Get all transactions filtered by status — "Success" or "Failed"
         List<TransactionHistoryDTO> getTransactionsByStatus(String status);
+        List<TransactionHistoryDTO> getTransactionsByBranchId(Integer branchId);
     }
 
