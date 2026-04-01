@@ -28,13 +28,19 @@ public class TransactionController {
 
     // URL: GET /api/transactions/branch/3
     //      (the {branchId} part comes from the URL — so 3 becomes the branchId)
+// GET /api/transactions/branch/{branchId} → returns all transactions for a given branch
+
     @GetMapping("/branch/{branchId}")
     public ResponseEntity<List<TransactionHistoryDTO>> getTransactionsByBranchId(
-            @PathVariable Integer branchId) {   // @PathVariable reads {branchId} from the URL
 
+            // branchId is taken from the URL (e.g., /branch/3 → branchId = 3)
+            @PathVariable Integer branchId) {
+
+        // fetch transactions from service layer
         List<TransactionHistoryDTO> transactions =
                 transactionHistoryService.getTransactionsByBranchId(branchId);
 
+        // return list with HTTP 200 OK
         return new ResponseEntity<>(transactions, HttpStatus.OK);
     }
 
