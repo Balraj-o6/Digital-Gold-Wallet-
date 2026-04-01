@@ -15,12 +15,10 @@ import com.example.mapper.AddressMapper;
 import com.example.mapper.PhysicalGoldTransactionMapper;
 import com.example.mapper.UserMapper;
 import com.example.mapper.VirtualGoldHoldingMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -80,7 +78,4 @@ public class UserService implements IUserService {
 		return portfolio;
 	}
 
-	
-	
-	
 }
