@@ -151,6 +151,7 @@ public class VendorServiceTests {
             List<AdminVendorDTO> result = vendorService.getVendorByTotalGoldQuantityGreaterThan(new BigDecimal("999999.00"));
             assertThat(result).isEmpty();
         }
+
     }
 
 
