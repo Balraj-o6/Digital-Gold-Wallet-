@@ -7,4 +7,5 @@ public interface IUserService {
     
     UserDTO getUserByEmail(String email);
     UserPortfolioDTO getUserPortfolio(Integer userId);
+    
 }

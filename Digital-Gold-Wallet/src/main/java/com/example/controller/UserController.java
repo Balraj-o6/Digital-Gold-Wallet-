@@ -12,6 +12,7 @@ import com.example.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -60,11 +61,12 @@ public class UserController {
     }
     
     
- // GET /api/users/email?email=abc@mail.com
+  
     @GetMapping("/email")
     public ResponseEntity<UserDTO> getUserByEmail(@RequestParam String email) {
         UserDTO user = userService.getUserByEmail(email);
         return new ResponseEntity<>(user, HttpStatus.OK);
     }
     //This api is fetching Transaction based on status
+    
 }

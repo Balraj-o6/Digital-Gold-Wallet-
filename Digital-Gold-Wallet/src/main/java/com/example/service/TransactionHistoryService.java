@@ -104,16 +104,16 @@ public class TransactionHistoryService implements ITransactionHistoryService {
 	@Override
 	public List<TransactionHistoryDTO> getTransactionHistoryByUserId(Integer userId) {
 
-		// Step 1 — check if any transactions exist for this user
+		
 		List<TransactionHistory> transactions = transactionHistoryRepository
 				.findByUser_UserIdOrderByCreatedAtDesc(userId);
 
-		// Step 2 — if list is empty, throw a meaningful error
+		
 		if (transactions.isEmpty()) {
 			throw new UserNotFoundException("No transaction history found for user ID: " + userId);
 		}
 
-		// Step 3 — convert each entity to DTO using stream + mapper
+		
 		return transactions.stream().map(TransactionHistoryMapper::convertEntityToDTO).collect(Collectors.toList());
 
 	}
