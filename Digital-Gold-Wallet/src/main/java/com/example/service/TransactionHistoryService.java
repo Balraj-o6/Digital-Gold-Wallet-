@@ -4,6 +4,7 @@ import com.example.dao.ITransactionHistoryRepository;
 import com.example.dto.TransactionHistoryDTO;
 import com.example.entity.TransactionHistory;
 import com.example.enums.TransactionStatus;
+import com.example.enums.TransactionType;
 import com.example.exception.UserNotFoundException;
 import com.example.mapper.TransactionHistoryMapper;
 
@@ -116,6 +117,17 @@ public class TransactionHistoryService implements ITransactionHistoryService {
 		// Step 3 — convert each entity to DTO using stream + mapper
 		return transactions.stream().map(TransactionHistoryMapper::convertEntityToDTO).collect(Collectors.toList());
 
+	}
+
+
+	@Override
+	public List<TransactionHistoryDTO> getTransactionsByType(String type) {
+		TransactionType transactionType = TransactionType.fromValue(type);
+		List<TransactionHistory> transactions =
+				transactionHistoryRepository.findByTransactionType(transactionType);
+		return transactions.stream()
+				.map(TransactionHistoryMapper::convertEntityToDTO)
+				.collect(Collectors.toList());
 	}
 
 }
