@@ -64,4 +64,16 @@ public class TransactionController {
 
 	}
 
+	// The city name comes directly from the URL path
+	@GetMapping("/physical/city/{city}")
+	public ResponseEntity<List<PhysicalGoldTransactionDTO>> getPhysicalTransactionsByCity(
+			@PathVariable String city) {    // reads the city name from the URL
+
+		List<PhysicalGoldTransactionDTO> transactions =
+				physicalGoldTransactionService.getPhysicalTransactionsByCity(city);
+
+		return new ResponseEntity<>(transactions, HttpStatus.OK);
+	}
+
+
 }
