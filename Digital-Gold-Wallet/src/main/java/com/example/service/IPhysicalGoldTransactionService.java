@@ -7,4 +7,6 @@ public interface IPhysicalGoldTransactionService {
 
 	// Get all physical gold transactions by branch ID
 	List<PhysicalGoldTransactionDTO> getPhysicalTransactionsByBranchId(Integer branchId);
+
+	List<PhysicalGoldTransactionDTO> getPhysicalTransactionsByCity(String city);
 }
