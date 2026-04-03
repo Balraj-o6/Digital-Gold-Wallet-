@@ -40,4 +40,32 @@ public class PhysicalGoldTransactionService implements IPhysicalGoldTransactionS
 
 		return resultList;
 	}
+
+
+	@Override
+	public List<PhysicalGoldTransactionDTO> getPhysicalTransactionsByCity(String city) {
+
+		// How this works step by step:
+		// 1. physical_gold_transactions table has delivery_address_id
+		// 2. That links to addresses table which has city column
+		// 3. findByDeliveryAddress_City() already exists in your repository
+		//    It means: find all rows where deliveryAddress.city = ?
+		List<PhysicalGoldTransaction> transactions =
+				physicalGoldTransactionRepository.findByDeliveryAddress_City(city);
+
+		List<PhysicalGoldTransactionDTO> resultList = new ArrayList<>();
+
+		for (PhysicalGoldTransaction txn : transactions) {
+
+			// PhysicalGoldTransactionMapper already handles everything:
+			// → transactionId, userName, branchName, quantity,
+			//   deliveryAddress (street, city, state, postalCode, country), requestDate
+			PhysicalGoldTransactionDTO dto =
+					PhysicalGoldTransactionMapper.convertEntityToDTO(txn);
+
+			resultList.add(dto);
+		}
+
+		return resultList;
+	}
 }
